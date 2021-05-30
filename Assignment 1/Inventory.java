@@ -42,6 +42,30 @@ public class Inventory {
 		System.out.printf("Total purchase : RM%.2f" , totalPurchase());
 	}
 	
+	public void setMaterial (String mat) {
+		this.material = mat;
+	}
+	
+	public String getMaterial() {
+		return this.material;
+	}
+	
+	public void setQuantity (int qty) {
+		this.quantity = qty;
+	}
+	
+	public int getQuantity() {
+		return this.quantity;
+	}
+	
+	public void setPrice (double price) {
+		this.price = price;
+	}
+	
+	public double getPrice() {
+		return this.price;
+	}
+	
 	public double totalPurchase() {
 		return this.quantity * this.price;
 	}

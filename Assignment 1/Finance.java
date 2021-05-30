@@ -42,6 +42,30 @@ public class Finance {
 		System.out.printf("\nTotal profit of the month         : RM%.2f", totalProfit());
 	}
 	
+	public void setIncome (double income) {
+		this.income = income;
+	}
+	
+	public double getIncome() {
+		return this.income;
+	}
+	
+	public void setIventoryPurchase(double invPurchase) {
+		this.inventoryPurchase = invPurchase;
+	}
+	
+	public double getIventoryPurchase() {
+		return this.inventoryPurchase;
+	}
+	
+	public void setIncidentalCharges(double charges) {
+		this.incidentalCharges = charges;
+	}
+	
+	public double getIncidentalCharges() {
+		return this.incidentalCharges;
+	}
+	
 	public double totalProfit() {
 		return this.income - this.inventoryPurchase - this.incidentalCharges;
 	}
