@@ -2,14 +2,15 @@ package Assignment_1;
 
 import java.util.*;
 
-public class ProductDescription {
+public class ProductDescription { //1.3 - User Define Class
 	
 	Scanner s = new Scanner(System.in);
 	
+	//1.2 - Pre-Define Class
 	String itemCategory;
 	String itemCode;
 	
-	public ProductDescription() {
+	public ProductDescription() { //1.4 - Constructor with no argument
 		System.out.println("---------- PRODUCT DESCRIPTION ----------");
 		System.out.println("Category : Bun" 
 						 + "\n           Tart" 
@@ -21,7 +22,7 @@ public class ProductDescription {
 		
 	}
 	
-	public ProductDescription(String itemCat) {
+	public ProductDescription(String itemCat) { //1.4 - Constructor with 1 argument
 		this.itemCategory = itemCat;
 		
 		System.out.println("---------- PRODUCT DESCRIPTION ----------");
@@ -29,8 +30,8 @@ public class ProductDescription {
 						 + "\n           Tart" 
 						 + "\n           Cake");
 		
-		//System.out.print("\nEnter a category to check the products provided : ");
-		//itemCat = s.next();
+		System.out.print("\nEnter a category to check the products provided : ");
+		itemCat = s.next();
 		System.out.println("\nSelected category : " + this.itemCategory);
 		System.out.println();
 		
@@ -60,7 +61,7 @@ public class ProductDescription {
 		}
 	}
 	
-	public ProductDescription(String itemCat, String itemCo) {
+	public ProductDescription(String itemCat, String itemCo) { //1.4 - Constructor with 2 argument
 		this.itemCategory = itemCat;
 		this.itemCode = itemCo;
 		
@@ -69,8 +70,8 @@ public class ProductDescription {
 				 		 + "\n           Tart" 
 				 		 + "\n           Cake");
 
-		//System.out.print("\nEnter a category to check the products provided : ");
-		//itemCat = s.next();
+		System.out.print("\nEnter a category to check the products provided : ");
+		itemCat = s.next();
 		System.out.println("\nSelected category : " + this.itemCategory);
 		System.out.println();
 		
@@ -81,8 +82,8 @@ public class ProductDescription {
 							 + "\nB02    Ham and Cheese Bun    RM4.00" 
 							 + "\nB03    Red Bean Bun          RM3.80");
 			
-			//System.out.print("\nEnter the product code to check the information : ");
-			//itemCo = s.next();
+			System.out.print("\nEnter the product code to check the information : ");
+			itemCo = s.next();
 			System.out.println("\nSelected code : " + this.itemCode);
 			
 			if(this.itemCode == "B01" || this.itemCode == "b01") {
@@ -105,8 +106,8 @@ public class ProductDescription {
 						 	 + "\nT02    Chocolate Almond Tart     RM2.80" 
 							 + "\nT03    Blueberry Cheese Tart     RM3.10");
 			
-			//System.out.print("\nEnter the product code to check the information : ");
-			//itemCo = s.next();
+			System.out.print("\nEnter the product code to check the information : ");
+			itemCo = s.next();
 			System.out.println("\nSelected code : " + this.itemCode);
 			
 			if(this.itemCode == "T01" || this.itemCode == "t01") {
@@ -129,8 +130,8 @@ public class ProductDescription {
 								+ "\nC02    Moist Chocolate Cake            RM11.90" 
 								+ "\nC03    Matcha Ice Cream Cake           RM18.90");	
 			
-			//System.out.print("\nEnter the product code to check the information : ");
-			//itemCo = s.next();
+			System.out.print("\nEnter the product code to check the information : ");
+			itemCo = s.next();
 			System.out.println("\nSelected code : " + this.itemCode);
 			
 			if(this.itemCode == "C01" || this.itemCode == "c01") {
@@ -145,23 +146,6 @@ public class ProductDescription {
 				cakeInfo();
 			}
 		}
-		
-	}
-	
-	public void setItemCategory (String itemCat) {
-		this.itemCategory = itemCat;
-	}
-	
-	public String getItemCategory() {
-		return this.itemCategory;
-	}
-	
-	public void setItemCode (String itemCo) {
-		this.itemCode = itemCo;
-	}
-	
-	public String getItemCode() {
-		return this.itemCode;
 	}
 	
 	public void bunInfo() {

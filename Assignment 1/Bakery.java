@@ -1,38 +1,23 @@
 package Assignment_1;
 
-public class Bakery {
+public class Bakery { //1.3 - User Define Class
 	
+	//1.2 - Pre-Define Class
 	String shopName;
 	int yearEstablished;
 	
-	public Bakery() {
+	public Bakery() { //1.4 - Constructor with no argument
 		this.shopName = "Cherry On Top Bakery";
 	}
 	
-	public Bakery(String sName) {
+	public Bakery(String sName) { //1.4 - Constructor with 1 argument
 		this.shopName = sName;
 	}
 	
-	public Bakery(String sName, int year) {
+	public Bakery(String sName, int year) { //1.4 - Constructor with 2 argument
 		this.shopName = sName;
 		this.yearEstablished = year;
 		bakeryInfo();
-	}
-	
-	public void setStoreName (String sName) {
-		this.shopName = sName;
-	}
-	
-	public String getStoreName() {
-		return this.shopName;
-	}
-	
-	public void setYearEstablished (int year) {
-		this.yearEstablished = year;
-	}
-	
-	public int getYearEstablished() {
-		return this.yearEstablished;
 	}
 	
 	public void bakeryInfo() {
@@ -49,6 +34,4 @@ public class Bakery {
 						 + "\n\nBaked with love. Let us be the Cherry On Top of your day!");
 	}
 	
-	
-
 }

@@ -1,22 +1,23 @@
 package Assignment_1;
 
-public class AdvertismentAndMarketing {
+public class AdvertismentAndMarketing { //1.3 - User Define Class
 	
+	//1.2 - Pre-Define Class
 	String promotion;
 	String sales;
 	
-	public AdvertismentAndMarketing() {
+	public AdvertismentAndMarketing() { //1.4 - Constructor with no argument
 		System.out.println("---------- ADVERTISMENT AND MARKETING ----------");
 	}
 	
-	public AdvertismentAndMarketing(String promo) {
+	public AdvertismentAndMarketing(String promo) { //1.4 - Constructor with 1 argument
 		this.promotion = promo;
 		
 		System.out.println("---------- ADVERTISMENT AND MARKETING ----------");
 		promotionNotice();
 	}
 	
-	public AdvertismentAndMarketing(String promo, String sales) {
+	public AdvertismentAndMarketing(String promo, String sales) { //1.4 - Constructor with 2 argument
 		this.promotion = promo;
 		this.sales = sales;
 		

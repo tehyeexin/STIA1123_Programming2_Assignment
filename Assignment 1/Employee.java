@@ -2,10 +2,11 @@ package Assignment_1;
 
 import java.util.Scanner;
 
-public class Employee {
+public class Employee { //1.3 - User Define Class
 	
 	Scanner s = new Scanner(System.in);
 	
+	//1.2 - Pre-Define Class
 	String employeeName;
 	int employeeID;
 	long employeeIC;
@@ -15,17 +16,18 @@ public class Employee {
 	String position;
 	double salary;
 	
-	public Employee() {
+	public Employee() { //1.4 - Constructor with no argument
 		System.out.println("---------- EMPLOYEE ----------");
 	}
 	
-	public Employee(String emName) {
+	public Employee(String emName) { //1.4 - Constructor with 1 argument
 		this.employeeName = emName;
 		
 		System.out.println("---------- EMPLOYEE ----------");
+		System.out.println("Employee name : " + this.employeeName);
 	}
 	
-	public Employee(String emName, int emID) {
+	public Employee(String emName, int emID) { //1.4 - Constructor with 2 argument
 		this.employeeName = emName;
 		this.employeeID = emID;
 		
@@ -41,38 +43,6 @@ public class Employee {
 			System.out.println("Not allowed to manage employee information.");
 		}
 	}	
-	
-	public void setEmployeeName (String emName) {
-		this.employeeName = emName;
-	}
-	
-	public String getEmployeeName() {
-		return this.employeeName;
-	}
-	
-	public void setEmployeeID (int emID) {
-		this.employeeID = emID;
-	}
-	
-	public int getEmployeeID() {
-		return this.employeeID;
-	}
-	
-	public void setPosition (String emPos) {
-		this.position = emPos;
-	}
-	
-	public String getPosition() {
-		return this.position;
-	}
-	
-	public void setSalary (double emSal) {
-		this.salary = emSal;
-	}
-	
-	public double getSalary() {
-		return this.salary;
-	}
 	
 	public void manageEmployeeInfo() {
 		System.out.println("Please enter the employee information.\n");
@@ -114,8 +84,8 @@ public class Employee {
 						 + "\nEmployee gender       : " + this.gender
 						 + "\nEmployee age          : " + this.age
 						 + "\nEmployee phone number : " + this.employeePhNum
-						 + "\nPosition              : " + this.position);
-		System.out.printf( "Salary                : RM%.2f" , this.salary);
+						 + "\nEmployee position     : " + this.position);
+		System.out.printf("Employee salary       : RM%.2f" , this.salary);
 	}
 
 }
