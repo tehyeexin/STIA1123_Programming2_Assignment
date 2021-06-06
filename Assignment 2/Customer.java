@@ -87,8 +87,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Mexico Coffee Bun"
 							 + "\nOrdered quantity  : " + getQuantity()
-							 + "\nPrice per unit    : RM3.50");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+							 + "\nPrice per unit    : RM3.50"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -98,8 +98,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Ham and Cheese Bun"
 							 + "\nOrdered quantity  : " + getQuantity()
-							 + "\nPrice per unit    : RM4.00");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+							 + "\nPrice per unit    : RM4.00"
+				 			 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -109,8 +109,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Red Bean Bun"
 							 + "\nOrdered quantity  : " + getQuantity()
-							 + "\nPrice per unit    : RM3.80");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+							 + "\nPrice per unit    : RM3.80"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -121,8 +121,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 						 	 + "\nOrdered item name : Portuguese Egg Tart"
 						 	 + "\nOrdered quantity  : " + getQuantity()
-						 	 + "\nPrice per unit    : RM2.40");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+						 	 + "\nPrice per unit    : RM2.40"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -132,8 +132,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Chocolate Almond Tart"
 							 + "\nOrdered quantity  : " + getQuantity()
-							 + "\nPrice per unit    : RM2.80");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+							 + "\nPrice per unit    : RM2.80"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -143,8 +143,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Blueberry Cheese Tart"
 							 + "\nOrdered quantity  : " + getQuantity()
-							 + "\nPrice per unit    : RM3.10");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+							 + "\nPrice per unit    : RM3.10"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -155,8 +155,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Hokkaido Triple Cheese Cake"
 							 + "\nOrdered quantity  : " + getQuantity()
-							 + "\nPrice per unit    : RM14.90");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+							 + "\nPrice per unit    : RM14.90"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -166,8 +166,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 					 		 + "\nOrdered item name : Moist Chocolate Cake"
 					 		 + "\nOrdered quantity  : " + getQuantity()
-					 		 + "\nPrice per unit    : RM11.90");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+					 		 + "\nPrice per unit    : RM11.90"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -177,8 +177,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Matcha Ice Cream Cake"
 							 + "\nOrdered quantity  : " + getQuantity()
-							 + "\nPrice per unit    : RM18.90");
-				System.out.printf("Total price       : RM%.2f" , getPayment());
+							 + "\nPrice per unit    : RM18.90"
+							 + "\nTotal price       : RM" + df2.format(getPayment()));
 				System.out.println();
 				discount();
 				break;
@@ -192,20 +192,20 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 	
 	public void discount() {
 		if(getPayment() < 30) {
-			System.out.printf("\nYour total purchase is RM%.2f", getPayment());
+			System.out.println("\nYour total purchase is RM" + df2.format(getPayment()));
 		}
 		
 		else if(getPayment() >= 30 && getPayment() < 50) {
 			System.out.println("\nYour had purchased RM30 and above! We have a 5% discount for you!");
 			double discount = 0.05;
 			double latestPurchase = getPayment() * (1 - discount);
-			System.out.printf("Now, your total purchase is RM%.2f", latestPurchase);
+			System.out.println("Now, your total purchase is RM" + df2.format(latestPurchase));
 		}
 		else {
 			System.out.println("\nYour had purchased RM50 and above! We have a 10% discount for you!");
 			double discount = 0.1;
 			double latestPurchase = getPayment() * (1 - discount);
-			System.out.printf("Now, your total purchase is RM%.2f", latestPurchase);
+			System.out.println("Now, your total purchase is RM" + df2.format(latestPurchase));
 		}
 	}
 	
