@@ -1,15 +1,17 @@
 package Assignment_2;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public abstract class ProductDescription { //2.1 - Inheritance & 2.4 - Abstraction
 	
 	Scanner s = new Scanner(System.in);
+	public static DecimalFormat df2 = new DecimalFormat("0.00");
 	
 	String itemCategory;
 	String itemCode;
 	
-	public ProductDescription(String itemCat, String itemCo) { 
+	public ProductDescription(String itemCat, String itemCo) { //constructor with 2 arguments
 		this.itemCategory = itemCat;
 		this.itemCode = itemCo;
 		
@@ -37,7 +39,7 @@ public abstract class ProductDescription { //2.1 - Inheritance & 2.4 - Abstracti
 		}
 	}
 	
-	public void bunInfo() {
+	public void bunInfo() { //information of bun
 			System.out.println("Products provided in category - BUN" 
 							 + "\nCode   Name                  Price");
 			System.out.println("B01    Mexico Coffee Bun     RM3.50" 
@@ -68,7 +70,7 @@ public abstract class ProductDescription { //2.1 - Inheritance & 2.4 - Abstracti
 			}
 	}
 	
-	public void tartInfo() {
+	public void tartInfo() { //information of tart
 			System.out.println("Products provided in category - TART" 
 							 + "\nCode   Name                      Price");
 			System.out.println("T01    Portuguese Egg Tart       RM2.40" 
@@ -99,7 +101,7 @@ public abstract class ProductDescription { //2.1 - Inheritance & 2.4 - Abstracti
 			}
 	}
 	
-	public void cakeInfo() {
+	public void cakeInfo() { //information of cake
 			System.out.println("Products provided in category - CAKE" 
 							 + "\nCode   Name                            Price");
 			System.out.println("C01    Hokkaido Triple Cheese Cake     RM14.90" 

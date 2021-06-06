@@ -14,8 +14,8 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 	double price;
 	int orderMethod;
 	
-	public Customer(String itemCat, String itemCo) {
-		super(itemCat, itemCo);
+	public Customer(String itemCat, String itemCo) { //constructor with 2 arguments
+		super(itemCat, itemCo); //variables from super class - ProductDescription
 	
 		printInfo();
 		System.out.println();
@@ -37,7 +37,7 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 	}
 	
 	//2.4 - Abstraction
-	public void customerOrder() { //abstract method from super class with body
+	public void customerOrder() { //abstract method from super class with body, method for customer to make order
 		System.out.println("What is your choice? Place your order here.");
 		System.out.println("\nCode   Name                            Price"
 							 + "\nB01    Mexico Coffee Bun               RM3.50" 
@@ -67,7 +67,7 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 		System.out.println();
 	}
 	
-	public void printOrderInfo() {
+	public void printOrderInfo() { //print customer's order details
 		System.out.println("- Customer's Order Summary -");
 		System.out.println("Name              : " + getCustomerName()
 						 + "\nPhone number      : " + getCustomerPhNumber()
@@ -186,11 +186,11 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 	}
 	
 	
-	public double totalPrice() {
+	public double totalPrice() { //calculate total price of customer's order
 		return this.quantity * this.price;
 	}
 	
-	public void discount() {
+	public void discount() { //calculate discount of customer's order
 		if(getPayment() < 30) {
 			System.out.println("\nYour total purchase is RM" + df2.format(getPayment()));
 		}

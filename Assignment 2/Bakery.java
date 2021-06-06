@@ -5,7 +5,7 @@ public abstract class Bakery { //2.1 - Inheritance & 2.4 - Abstraction
 	String shopName;
 	int yearEstablished;
 	
-	public Bakery(String sName, int year) { 
+	public Bakery(String sName, int year) { //constructor with 2 arguments
 		this.shopName = sName;
 		this.yearEstablished = year;
 		System.out.println("---------- BAKERY ----------");

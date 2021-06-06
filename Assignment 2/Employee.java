@@ -17,7 +17,7 @@ public abstract class Employee { //2.1 - Inheritance & 2.4 - Abstraction
 	String position;
 	double salary;
 	
-	public Employee(String emName, int emID) { 
+	public Employee(String emName, int emID) { //constructor with 2 arguments
 		this.employeeName = emName;
 		this.employeeID = emID;
 		setPosition("Manager");
@@ -37,7 +37,7 @@ public abstract class Employee { //2.1 - Inheritance & 2.4 - Abstraction
 		}
 	}	
 	
-	public void manageEmployeeInfo() {
+	public void manageEmployeeInfo() { //enter employee's information
 		System.out.println("Please enter the employee information.\n");
 		
 		System.out.print("Enter employee name         : ");

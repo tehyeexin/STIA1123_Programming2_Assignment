@@ -28,18 +28,19 @@ public class Inventory {
 		if(confirm == 0) {
 			System.out.println("Inventory details updated successfully.");
 			System.out.println();
-			printInventoryInfo();
+			printInfo();
 		}
 		else {
 			System.out.println("Inventory details updated unsuccessfully. Please exit and re-enter.");
 		}
 	}
 	
-	public double totalPurchase() {
+	public double totalPurchase() { //calculate total purchase of material
 		return this.quantity * this.price;
 	}
 	
-	public void printInventoryInfo() {
+	//2.2 - Polymorphism
+	public void printInfo() { //overriding
 		System.out.println("- Inventory Details -");
 		System.out.println("Name of material     : " + getMaterial()
 						 + "\nQuantity of purchase : " + getQuantity()

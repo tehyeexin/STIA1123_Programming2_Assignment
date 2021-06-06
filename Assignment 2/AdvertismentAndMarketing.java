@@ -4,15 +4,15 @@ public class AdvertismentAndMarketing extends Bakery{ //2.1 - Inheritance
 	
 	String promotion;
 	
-	public AdvertismentAndMarketing(String sName, int year, String promo) { 
-		super(sName, year);
+	public AdvertismentAndMarketing(String sName, int year, String promo) { //constructor with 3 argument
+		super(sName, year); //variables from super class - Bakery
 		this.promotion = promo;
 		printInfo();
 		socialMedia();
 	}
 	
 	//2.2 - Polymorphism
-	public void printInfo() {
+	public void printInfo() { //overriding
 		super.printInfo();
 		System.out.println("\n\n---------- ADVERTISMENT AND MARKETING ----------"
 				 + "\nHi there! Here are some special for you!"

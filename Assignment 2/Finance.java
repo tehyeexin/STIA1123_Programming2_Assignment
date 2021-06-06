@@ -11,8 +11,8 @@ public class Finance extends Employee implements Payment { //2.1 - Inheritance &
 	double incidentalCharges;
 	double totalEmployeeSalary;
 	
-	public Finance(String emName, int emID) { 
-		super(emName, emID);
+	public Finance(String emName, int emID) { //constructor with 2 arguments
+		super(emName, emID); //variables from super class - Employee
 		
 		System.out.println("\n\n---------- FINANCE ----------"); 
 		System.out.println("Please enter the financial details.\n");
@@ -34,7 +34,6 @@ public class Finance extends Employee implements Payment { //2.1 - Inheritance &
 		if(confirm == 0) {
 			System.out.println("Financial details updated successfully.");
 			System.out.println();
-			//printInfo();
 		}
 		else {
 			System.out.println("Financial details updated unsuccessfully. Please exit and re-enter.");
@@ -58,7 +57,7 @@ public class Finance extends Employee implements Payment { //2.1 - Inheritance &
 	}
 	
 	//2.4 - Abstraction
-	public void calEmployeeSalary() { //abstract method from super class with body
+	public void calEmployeeSalary() { //abstract method from super class with body, calculate total employees' salary
 		System.out.print("Enter numbers of employees : ");
 		int employeeNum = s.nextInt();
 		double sum = 0;
@@ -70,7 +69,7 @@ public class Finance extends Employee implements Payment { //2.1 - Inheritance &
 		System.out.println("Total monthly salary of employees : RM" + df2.format(sum));
 	}
 	
-	public double totalProfit(double totalSalary) {
+	public double totalProfit(double totalSalary) { //calculate total profit
 		return this.income - this.inventoryPurchase - this.incidentalCharges - totalSalary;
 	}
 	
@@ -108,7 +107,7 @@ public class Finance extends Employee implements Payment { //2.1 - Inheritance &
 	}
 	
 	//2.5 - Interface
-	public double getPayment() {
+	public double getPayment() { 
 		return getInventoryPurchase() + getIncidentalCharges() + getTotalEmployeeSalary();
 	}
 
