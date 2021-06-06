@@ -30,7 +30,7 @@ public class Finance { //1.3 - User Define Class
 		System.out.print("Enter total monthly income   : RM");
 		income = s.nextDouble();
 		System.out.print("Enter total monthly purchase : RM");
-		income = s.nextDouble();
+		invPurchase = s.nextDouble();
 	}
 	
 	public Finance(double income, double invPurchase, double charges, double totalEmSalary) { //1.4 - Constructor with 4 argument
@@ -42,11 +42,11 @@ public class Finance { //1.3 - User Define Class
 		System.out.print("Enter total monthly income              : RM");
 		income = s.nextDouble();
 		System.out.print("Enter total monthly purchase            : RM");
-		income = s.nextDouble(); 
+		invPurchase = s.nextDouble(); 
 		System.out.print("Enter total monthly incidental charges  : RM");
 		charges = s.nextDouble();
 		System.out.print("Enter total monthly salary of employees : RM");
-		charges = s.nextDouble();
+		totalEmSalary = s.nextDouble();
 		System.out.printf("Total profit of the month               : RM%.2f", totalProfit());
 	}
 	
