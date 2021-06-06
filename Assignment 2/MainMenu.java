@@ -7,7 +7,7 @@ public class MainMenu {
 		AdvertismentAndMarketing ad = new AdvertismentAndMarketing("Cherry On Top Bakery", 2021, "Promotion");
 		System.out.println("\n");
 		
-		Customer customer = new Customer("Cake", "C03");
+		Customer customer = new Customer("Cake", "C02");
 		System.out.println("\n\n");
 		
 		Inventory inventory = new Inventory();

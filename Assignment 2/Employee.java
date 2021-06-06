@@ -81,7 +81,7 @@ public abstract class Employee { //2.1 - Inheritance & 2.4 - Abstraction
 	}
 	
 	//2.4 - Abstraction
-	public abstract void calEmployeeSalary();
+	public abstract void calEmployeeSalary(); //abstract method with no body
 	
 	//2.3 - Encapsulation
 	public void setEmployeeName (String emName) {

@@ -37,7 +37,7 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 	}
 	
 	//2.4 - Abstraction
-	public void customerOrder() { 
+	public void customerOrder() { //abstract method from super class with body
 		System.out.println("What is your choice? Place your order here.");
 		System.out.println("\nCode   Name                            Price"
 							 + "\nB01    Mexico Coffee Bun               RM3.50" 
@@ -83,102 +83,102 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 		//BUN
 		switch(this.itemCode) {
 			case "B01" :
-				this.price = 3.50;
+				setPrice(3.50);
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Mexico Coffee Bun"
 							 + "\nOrdered quantity  : " + getQuantity()
 							 + "\nPrice per unit    : RM3.50");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 		
 			case "B02" :
-				this.price = 4.00;
+				setPrice(4.00);
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Ham and Cheese Bun"
 							 + "\nOrdered quantity  : " + getQuantity()
 							 + "\nPrice per unit    : RM4.00");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 		
 			case "B03" :
-				this.price = 3.80;
+				setPrice(3.80);
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Red Bean Bun"
 							 + "\nOrdered quantity  : " + getQuantity()
 							 + "\nPrice per unit    : RM3.80");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 				
 		//TART
 			case "T01" :
-				this.price = 2.40;
+				setPrice(2.40);
 				System.out.println("Ordered item code : " + getItemCode()
 						 	 + "\nOrdered item name : Portuguese Egg Tart"
 						 	 + "\nOrdered quantity  : " + getQuantity()
 						 	 + "\nPrice per unit    : RM2.40");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 		
 			case "T02" :
-				this.price = 2.80;
+				setPrice(2.80);
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Chocolate Almond Tart"
 							 + "\nOrdered quantity  : " + getQuantity()
 							 + "\nPrice per unit    : RM2.80");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 	
 			case "T03" :
-				this.price = 3.10;
+				setPrice(3.10);
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Blueberry Cheese Tart"
 							 + "\nOrdered quantity  : " + getQuantity()
 							 + "\nPrice per unit    : RM3.10");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 	
 		//CAKE
 			case "C01" :
-				this.price = 14.90;
+				setPrice(14.90);
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Hokkaido Triple Cheese Cake"
 							 + "\nOrdered quantity  : " + getQuantity()
 							 + "\nPrice per unit    : RM14.90");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 				
 			case "C02" :
-				this.price = 11.90;
+				setPrice(11.90);
 				System.out.println("Ordered item code : " + getItemCode()
 					 		 + "\nOrdered item name : Moist Chocolate Cake"
 					 		 + "\nOrdered quantity  : " + getQuantity()
 					 		 + "\nPrice per unit    : RM11.90");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
 		
 			case "C03" :
-				this.price = 18.90;
+				setPrice(18.90);
 				System.out.println("Ordered item code : " + getItemCode()
 							 + "\nOrdered item name : Matcha Ice Cream Cake"
 							 + "\nOrdered quantity  : " + getQuantity()
 							 + "\nPrice per unit    : RM18.90");
-				System.out.printf("Total price       : RM%.2f" , totalPrice());
+				System.out.printf("Total price       : RM%.2f" , getPayment());
 				System.out.println();
 				discount();
 				break;
@@ -191,20 +191,20 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 	}
 	
 	public void discount() {
-		if(totalPrice() < 30) {
-			System.out.printf("\nYour total purchase is RM%.2f", totalPrice());
+		if(getPayment() < 30) {
+			System.out.printf("\nYour total purchase is RM%.2f", getPayment());
 		}
 		
-		else if(totalPrice() >= 30 && totalPrice() < 50) {
+		else if(getPayment() >= 30 && getPayment() < 50) {
 			System.out.println("\nYour had purchased RM30 and above! We have a 5% discount for you!");
 			double discount = 0.05;
-			double latestPurchase = totalPrice() * (1 - discount);
+			double latestPurchase = getPayment() * (1 - discount);
 			System.out.printf("Now, your total purchase is RM%.2f", latestPurchase);
 		}
 		else {
 			System.out.println("\nYour had purchased RM50 and above! We have a 10% discount for you!");
 			double discount = 0.1;
-			double latestPurchase = totalPrice() * (1 - discount);
+			double latestPurchase = getPayment() * (1 - discount);
 			System.out.printf("Now, your total purchase is RM%.2f", latestPurchase);
 		}
 	}
@@ -268,7 +268,7 @@ public class Customer extends ProductDescription implements Payment { //2.1 - In
 
 	//2.5 - Interface
 	public double getPayment() {
-		return 0;
+		return totalPrice();
 	}
 
 }

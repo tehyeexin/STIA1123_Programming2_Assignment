@@ -16,11 +16,11 @@ public class Inventory {
 		System.out.println("---------- INVENTORY ----------");
 		System.out.println("Please enter the inventory details.\n");
 		
-		System.out.print("Enter material purchased    : ");
-		this.material = s.next();	
-		System.out.print("Enter quantity purchased    : ");
+		System.out.print("Enter material purchased         : ");
+		this.material = s.nextLine();	
+		System.out.print("Enter quantity purchased         : ");
 		this.quantity = s.nextInt();	
-		System.out.print("Enter price of the material : RM");
+		System.out.print("Enter unit price of the material : RM");
 		this.price = s.nextDouble();	
 		
 		System.out.println("\nPlease enter 0 to confirm.");

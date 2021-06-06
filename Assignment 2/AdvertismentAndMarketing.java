@@ -23,7 +23,7 @@ public class AdvertismentAndMarketing extends Bakery{ //2.1 - Inheritance
 	}
 	
 	//2.4 - Abstraction
-	public void socialMedia() {
+	public void socialMedia() { //abstract method from super class with body
 		System.out.println("\nFollow us on social media! Keep up to date with our latest updates!"
 				 + "\nFacebook  : Cherry On Top Bakery" 
 				 + "\nInstagram : @cherryontopbakery"  

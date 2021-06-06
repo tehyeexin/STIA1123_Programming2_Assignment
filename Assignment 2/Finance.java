@@ -2,7 +2,7 @@ package Assignment_2;
 
 import java.util.Scanner;
 
-public class Finance extends Employee { //2.1 - Inheritance
+public class Finance extends Employee implements Payment { //2.1 - Inheritance & 2.5 - Interface
 
 	Scanner s = new Scanner(System.in);
 	
@@ -53,11 +53,12 @@ public class Finance extends Employee { //2.1 - Inheritance
 						+"\nEnter total monthly purchase            : RM" + df2.format(getInventoryPurchase())
 						+"\nEnter total monthly incidental charges  : RM" + df2.format(getIncidentalCharges())
 						+"\nEnter total monthly salary of employees : RM" + df2.format(getTotalEmployeeSalary())
-						+"\nTotal profit of the month               : RM" + df2.format(totalProfit(getTotalEmployeeSalary())));
+						+"\n\nTotal payment of the month : RM" + df2.format(getPayment())
+						+"\nTotal profit of the month  : RM" + df2.format(totalProfit(getTotalEmployeeSalary())));
 	}
 	
 	//2.4 - Abstraction
-	public void calEmployeeSalary() {
+	public void calEmployeeSalary() { //abstract method from super class with body
 		System.out.print("Enter numbers of employees : ");
 		int employeeNum = s.nextInt();
 		double sum = 0;
@@ -104,6 +105,11 @@ public class Finance extends Employee { //2.1 - Inheritance
 	
 	public double getTotalEmployeeSalary() {
 		return this.totalEmployeeSalary;
+	}
+	
+	//2.5 - Interface
+	public double getPayment() {
+		return getInventoryPurchase() + getIncidentalCharges() + getTotalEmployeeSalary();
 	}
 
 }
