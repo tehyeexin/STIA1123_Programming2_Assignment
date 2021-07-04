@@ -529,7 +529,7 @@ public class Customer_OrderPage extends JFrame {
 						textField_subtotal.setText(String.format("%.2f", subtotal));
 						
 						if(subtotal < 30) {
-							textField_discountPercent.setText("0%");
+							textField_discountPercent.setText("N/A");
 							
 							double orderTotal = subtotal;
 							textField_orderTotal.setText(String.format("%.2f", orderTotal));
@@ -613,7 +613,7 @@ public class Customer_OrderPage extends JFrame {
 				for(int i = 0; i < table.getRowCount(); i++) { 
 					sum = sum + Double.parseDouble(table.getValueAt(i, 8).toString());
 				}
-				lblTotalOrder2.setText(String.format("%.2f", sum));
+				lblTotalOrder2.setText(String.format("%.2f", sum)); 
 			}
 		});
 

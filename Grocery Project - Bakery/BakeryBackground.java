@@ -48,7 +48,6 @@ public class BakeryBackground extends JFrame {
 	 * Create the frame.
 	 */
 	public BakeryBackground() {
-		setBackground(new Color(255, 240, 245));
 		
 		//-------------------------------------------------------//
 		//---------------- Initialize Components ----------------//
@@ -57,6 +56,7 @@ public class BakeryBackground extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(BakeryBackground.class.getResource("/BakeryIcons/Cherry Icon.png")));
 		setFont(new Font("Gabriola", Font.BOLD, 12));
 		setTitle("Cherry On Top Bakery");
+		setBackground(new Color(255, 240, 245));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
